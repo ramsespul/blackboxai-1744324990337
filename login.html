@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mi Aplicación</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 space-y-8">
+        <!-- Logo y Título -->
+        <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-4">
+                <i class="fas fa-user-circle text-3xl text-blue-600"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">Bienvenido</h2>
+            <p class="mt-2 text-gray-600">Ingresa a tu cuenta</p>
+        </div>
+
+        <!-- Formulario de Login -->
+        <form class="space-y-6">
+            <!-- Campo Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                    Correo Electrónico
+                </label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-envelope text-gray-400"></i>
+                    </div>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                        placeholder="ejemplo@correo.com"
+                    >
+                </div>
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                    Contraseña
+                </label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-lock text-gray-400"></i>
+                    </div>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                        class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                        placeholder="••••••••"
+                    >
+                </div>
+            </div>
+
+            <!-- Recordarme y Olvidé contraseña -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input 
+                        type="checkbox" 
+                        id="remember" 
+                        class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    >
+                    <label for="remember" class="ml-2 block text-sm text-gray-700">
+                        Recordarme
+                    </label>
+                </div>
+                <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-500">
+                    ¿Olvidaste tu contraseña?
+                </a>
+            </div>
+
+            <!-- Botón de Inicio de Sesión -->
+            <button 
+                type="submit" 
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+            >
+                Iniciar Sesión
+            </button>
+        </form>
+
+        <!-- Separador -->
+        <div class="relative">
+            <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-center text-sm">
+                <span class="px-2 bg-white text-gray-500">O continúa con</span>
+            </div>
+        </div>
+
+        <!-- Botones de Redes Sociales -->
+        <div class="grid grid-cols-2 gap-4">
+            <button class="flex items-center justify-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-150">
+                <i class="fab fa-google text-red-500 mr-2"></i>
+                <span class="text-sm font-medium text-gray-700">Google</span>
+            </button>
+            <button class="flex items-center justify-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-150">
+                <i class="fab fa-facebook text-blue-600 mr-2"></i>
+                <span class="text-sm font-medium text-gray-700">Facebook</span>
+            </button>
+        </div>
+
+        <!-- Registro -->
+        <div class="text-center text-sm">
+            <span class="text-gray-600">¿No tienes una cuenta?</span>
+            <a href="#" class="font-medium text-blue-600 hover:text-blue-500 ml-1">Regístrate</a>
+        </div>
+    </div>
+</body>
+</html>
